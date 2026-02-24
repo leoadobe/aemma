@@ -1,10 +1,14 @@
+/* Columns Block - TIM Brazil Design */
+
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-m);
 }
 
 .columns img {
   width: 100%;
+  border-radius: var(--border-radius-m);
 }
 
 .columns > div > div {
@@ -19,11 +23,36 @@
   display: block;
 }
 
+/* text column styling */
+.columns > div > div:not(.columns-img-col) h2,
+.columns > div > div:not(.columns-img-col) h3 {
+  color: var(--text-color);
+  margin-top: 0;
+}
+
+.columns > div > div:not(.columns-img-col) p {
+  color: var(--text-color-muted);
+  line-height: 1.6;
+}
+
+/* dark/blue section columns */
+.section.dark .columns > div > div:not(.columns-img-col) h2,
+.section.dark .columns > div > div:not(.columns-img-col) h3,
+.section.blue .columns > div > div:not(.columns-img-col) h2,
+.section.blue .columns > div > div:not(.columns-img-col) h3 {
+  color: #fff;
+}
+
+.section.dark .columns > div > div:not(.columns-img-col) p,
+.section.blue .columns > div > div:not(.columns-img-col) p {
+  color: rgb(255 255 255 / 85%);
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: row;
+    gap: var(--spacing-xl);
   }
 
   .columns > div > div {

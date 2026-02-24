@@ -1,58 +1,90 @@
+/* Tabs Block - TIM Brazil Design */
+
 .tabs .tabs-list {
   display: flex;
-  gap: 0.5ch;
+  gap: 4px;
   max-width: 100%;
-  font-size: var(--body-font-size-xs);
   overflow-x: auto;
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--light-color);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
-@media (width >= 600px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-s);
-  }
-}
-
-@media (width >= 900px) {
-  .tabs .tabs-list {
-    font-size: var(--body-font-size-m);
-  }
+.tabs .tabs-list::-webkit-scrollbar {
+  display: none;
 }
 
 .tabs .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
-  border: 1px solid #dadada;
+  border: none;
+  border-bottom: 3px solid transparent;
   border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
-  transition: background-color 0.2s;
+  padding: var(--spacing-xs) var(--spacing-s);
+  background-color: transparent;
+  color: var(--text-color-muted);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .tabs .tabs-list button p {
   margin: 0;
+  color: inherit;
 }
 
+.tabs .tabs-list button:hover {
+  color: var(--color-tim-blue);
+}
 
 .tabs .tabs-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+  color: var(--color-tim-blue);
+  border-bottom-color: var(--color-tim-blue);
+  background-color: transparent;
 }
 
 .tabs .tabs-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
+  margin-top: 0;
+  padding: var(--spacing-m) 0;
+  border: none;
   overflow: auto;
 }
 
 .tabs .tabs-panel[aria-hidden='true'] {
   display: none;
+}
+
+/* dark/blue section tabs */
+.section.dark .tabs .tabs-list,
+.section.blue .tabs .tabs-list {
+  border-bottom-color: rgb(255 255 255 / 20%);
+}
+
+.section.dark .tabs .tabs-list button,
+.section.blue .tabs .tabs-list button {
+  color: rgb(255 255 255 / 60%);
+}
+
+.section.dark .tabs .tabs-list button:hover,
+.section.blue .tabs .tabs-list button:hover {
+  color: #fff;
+}
+
+.section.dark .tabs .tabs-list button[aria-selected='true'],
+.section.blue .tabs .tabs-list button[aria-selected='true'] {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (width >= 600px) {
+  .tabs .tabs-list button {
+    font-size: var(--body-font-size-m);
+    padding: var(--spacing-xs) var(--spacing-m);
+  }
 }

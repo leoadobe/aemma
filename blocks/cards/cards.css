@@ -1,19 +1,24 @@
+/* Cards Block - TIM Brazil Design */
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-m);
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
   background-color: var(--background-color);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.cards .cards-card-body {
-  margin: 16px;
+.cards > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
 }
 
 .cards .cards-card-image {
@@ -24,4 +29,83 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards .cards-card-body {
+  padding: var(--spacing-s);
+}
+
+.cards .cards-card-body h3 {
+  font-size: var(--heading-font-size-m);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xs);
+}
+
+.cards .cards-card-body p {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-muted);
+  line-height: 1.5;
+  margin: 0 0 var(--spacing-xs);
+}
+
+.cards .cards-card-body a:any-link {
+  color: var(--color-tim-blue);
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
+}
+
+/* no-images variant — feature grid */
+.cards.no-images > ul {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--spacing-s);
+}
+
+.cards.no-images > ul > li {
+  background-color: var(--background-color);
+  border: 1px solid var(--light-color);
+  border-radius: var(--border-radius-m);
+  padding: var(--spacing-m);
+}
+
+.cards.no-images > ul > li:hover {
+  border-color: var(--color-tim-blue);
+}
+
+.cards.no-images .cards-card-body {
+  padding: 0;
+}
+
+.cards.no-images .cards-card-body h3 {
+  font-size: var(--heading-font-size-s);
+  color: var(--color-tim-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* dark section cards */
+.section.dark .cards > ul > li,
+.section.blue .cards > ul > li {
+  background-color: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 15%);
+}
+
+.section.dark .cards .cards-card-body h3,
+.section.blue .cards .cards-card-body h3 {
+  color: #fff;
+}
+
+.section.dark .cards .cards-card-body p,
+.section.blue .cards .cards-card-body p {
+  color: rgb(255 255 255 / 80%);
+}
+
+@media (width >= 900px) {
+  .cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-l);
+  }
+
+  .cards.no-images > ul {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
