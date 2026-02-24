@@ -423,3 +423,28 @@ main .section.blue a.button.secondary:hover {
   background-color: #fff;
   color: var(--color-tim-blue);
 }
+
+main .section.blue a:any-link {
+  color: #fff;
+}
+
+/* centered banner — section with only a paragraph, no blocks */
+main .section.blue > .default-content-wrapper:only-child {
+  text-align: center;
+}
+
+main .section.blue > .default-content-wrapper:only-child p {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* strikethrough price */
+del {
+  color: var(--text-color-muted);
+  text-decoration: line-through;
+  font-size: 0.85em;
+  opacity: 0.7;
+}

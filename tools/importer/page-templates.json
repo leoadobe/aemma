@@ -1,6 +1,42 @@
 {
   "templates": [
     {
+      "name": "tim-bbb-promo-page",
+      "urls": [
+        "https://www.tim.com.br/bbb/"
+      ],
+      "description": "TIM Brazil BBB promotional page with hero image, pricing cards for mobile and fiber plans, Ultrafibra columns CTA, customer banner, and Globoplay FAQ accordion",
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": [
+            "div.hero-carrossel.hero-destaque.hero-destaque-full-image"
+          ],
+          "section": "dark"
+        },
+        {
+          "name": "cards",
+          "instances": [
+            "div.modulo-7-1-3-pricing-em-card tim-card-pricing-new"
+          ]
+        },
+        {
+          "name": "columns",
+          "instances": [
+            "div.conjunto-img-txt#f5cc"
+          ],
+          "section": "blue"
+        },
+        {
+          "name": "accordion",
+          "instances": [
+            "div.faq-container"
+          ],
+          "section": "dark"
+        }
+      ]
+    },
+    {
       "name": "tim-5g-page",
       "urls": [
         "https://www.tim.com.br/para-voce/cobertura-e-roaming/5g"

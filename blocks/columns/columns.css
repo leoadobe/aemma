@@ -48,6 +48,44 @@
   color: rgb(255 255 255 / 85%);
 }
 
+/* CTA links in dark/blue section columns as white buttons */
+.section.dark .columns a:any-link,
+.section.blue .columns a:any-link {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #fff;
+  color: var(--color-tim-blue);
+  font-weight: 700;
+  border-radius: var(--border-radius-m);
+  text-decoration: none;
+  margin-top: var(--spacing-s);
+  transition: background-color var(--transition-base);
+}
+
+.section.dark .columns a:hover,
+.section.blue .columns a:hover {
+  background-color: var(--light-color);
+  text-decoration: none;
+}
+
+/* bold text in columns as heading-like display */
+.section.blue .columns > div > div:not(.columns-img-col) strong {
+  display: block;
+  color: #fff;
+}
+
+.section.blue .columns > div > div:not(.columns-img-col) strong:first-child {
+  font-size: var(--heading-font-size-s);
+  margin-bottom: var(--spacing-xs);
+  opacity: 0.9;
+}
+
+.section.blue .columns > div > div:not(.columns-img-col) strong:nth-child(2) {
+  font-size: var(--heading-font-size-l);
+  font-weight: 800;
+  margin-bottom: var(--spacing-s);
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
