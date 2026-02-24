@@ -1,0 +1,108 @@
+{
+  "templates": [
+    {
+      "name": "tim-5g-page",
+      "urls": [
+        "https://www.tim.com.br/para-voce/cobertura-e-roaming/5g"
+      ],
+      "description": "TIM Brazil 5G coverage and information page with hero, device compatibility tabs, benefits cards, activation guides, FAQ accordion, and promotional content",
+      "blocks": [
+        {
+          "name": "section-hero",
+          "instances": [
+            "div.hero-carrossel.hero-destaque.hero-destaque-full-image"
+          ],
+          "section": "dark"
+        },
+        {
+          "name": "hero",
+          "instances": [
+            "div.hero-carrossel.hero-destaque.hero-destaque-full-image"
+          ]
+        },
+        {
+          "name": "section-how-to-navigate",
+          "instances": [
+            "div.horizontal-list-image.links"
+          ],
+          "section": "default"
+        },
+        {
+          "name": "cards",
+          "instances": [
+            "div.horizontal-list-image.links",
+            "div.lista-vertical-descricao-links"
+          ]
+        },
+        {
+          "name": "section-compatible-devices",
+          "instances": [
+            "div.scroll-card.modulo-31-scroll-de-card"
+          ],
+          "section": "default"
+        },
+        {
+          "name": "tabs",
+          "instances": [
+            "div.scroll-card.modulo-31-scroll-de-card",
+            "div.scroll-card.m66-tab-horizontal"
+          ]
+        },
+        {
+          "name": "section-impact-areas",
+          "instances": [
+            "div.accordion-vertical-image"
+          ],
+          "section": "dark"
+        },
+        {
+          "name": "columns",
+          "instances": [
+            "div.accordion-vertical-image",
+            "div.conjunto-img-txt"
+          ]
+        },
+        {
+          "name": "section-activation",
+          "instances": [
+            "div.scroll-card.m66-tab-horizontal"
+          ],
+          "section": "dark"
+        },
+        {
+          "name": "section-turbo-package",
+          "instances": [
+            "div.conjunto-img-txt"
+          ],
+          "section": "default"
+        },
+        {
+          "name": "section-journey",
+          "instances": [
+            "div.carrossel-conteudo"
+          ],
+          "section": "default"
+        },
+        {
+          "name": "cards-journey",
+          "instances": [
+            "div.carrossel-conteudo"
+          ]
+        },
+        {
+          "name": "section-faq",
+          "instances": [
+            "div.faq-container"
+          ],
+          "section": "dark"
+        },
+        {
+          "name": "accordion",
+          "instances": [
+            "div.faq-container"
+          ]
+        }
+      ]
+    }
+  ]
+}
